@@ -21,7 +21,7 @@ class Info extends \Magefan\Community\Block\Adminhtml\System\Config\Form\Info
      */
     protected function getModuleUrl()
     {
-        return 'https://mage' . 'fan.com/magento-2-speed-optimization';
+        return 'https://mage' . 'fan.com/magento-2-google-page-speed-optimizer';
     }
 
     /**
@@ -30,6 +30,6 @@ class Info extends \Magefan\Community\Block\Adminhtml\System\Config\Form\Info
      */
     protected function getModuleTitle()
     {
-        return 'Speed Optimization';
+        return 'Page Speed Optimization';
     }
 }
