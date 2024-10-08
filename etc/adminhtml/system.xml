@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="mfspeedoptimizations" translate="label" type="text" sortOrder="10423249090" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Page Speed Optimization</label>
+            <tab>magefan</tab>
+            <resource>Magefan_SpeedOptimization::config_section</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <attribute type="expanded">1</attribute>
+                <field id="version" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Magefan\SpeedOptimization\Block\Adminhtml\System\Config\Form\Info</frontend_model>
+                </field>
+                <!--
+                <field id="enabled" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Extension</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="key" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Product Key</label>
+                    <frontend_model>Magefan\Community\Block\Adminhtml\System\Config\Form\ProductKeyField</frontend_model>
+                </field>
+                -->
+            </group>
+            <group id="image" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Image Optimization</label>
+                <attribute type="expanded">1</attribute>
+                <group id="lazy_load" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Defer Offscreen Images</label>
+                    <attribute type="expanded">1</attribute>
+                    <field id="lazy_load_optimization" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <frontend_model>Magefan\SpeedOptimization\Block\Adminhtml\System\Config\Form\LazyLoad</frontend_model>
+                    </field>
+                </group>
+                <group id="webp" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Serve Images In Next-Gen Formats</label>
+                    <attribute type="expanded">1</attribute>
+                    <field id="webp_optimization" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <frontend_model>Magefan\SpeedOptimization\Block\Adminhtml\System\Config\Form\WebP</frontend_model>
+                    </field>
+                </group>
+            </group>
+            <group id="rocket_java_script" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>JavaScript Optimization</label>
+                <attribute type="expanded">1</attribute>
+                <field id="rocket_java_script_optimization" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Magefan\SpeedOptimization\Block\Adminhtml\System\Config\Form\RocketJavaScript</frontend_model>
+                </field>
+            </group>
+            <group id="cache_warmer" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Reduce Initial Server Response Times / Page Cache Warmer</label>
+                <attribute type="expanded">1</attribute>
+                <field id="cache_warmer_optimization" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Magefan\SpeedOptimization\Block\Adminhtml\System\Config\Form\CacheWarmer</frontend_model>
+                </field>
+            </group>
+            <group id="css" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>CSS Optimization</label>
+                <field id="merge_css_files" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Merge CSS Files</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>Magefan\SpeedOptimization\Model\Config\Backend\DevSettings</backend_model>
+                </field>
+                <field id="minify_files" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Minify CSS Files</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>Magefan\SpeedOptimization\Model\Config\Backend\DevSettings</backend_model>
+                    <comment>Minification is not applied in developer mode.</comment>
+                </field>
+                <field id="info" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>Magefan\SpeedOptimization\Block\Adminhtml\System\Config\Form\PrintCss</frontend_model>
+                </field>
+                <field id="move_print_css_to_bottom" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Move Print CSS To The Bottom Of The Page (Plus)</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="html" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>HTML Optimization</label>
+                <field id="minify_html" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Minify HTML</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>Magefan\SpeedOptimization\Model\Config\Backend\DevSettings</backend_model>
+                </field>
+            </group>
+            <group id="database" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Database Optimization</label>
+                <field id="flat_catalog_category" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use Flat Catalog Category</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>Magefan\SpeedOptimization\Model\Config\Backend\DevSettings</backend_model>
+                </field>
+                <field id="flat_catalog_product" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use Flat Catalog Product</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>Magefan\SpeedOptimization\Model\Config\Backend\DevSettings</backend_model>
+                </field>
+                <field id="clean_database_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Enable Clean Database</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

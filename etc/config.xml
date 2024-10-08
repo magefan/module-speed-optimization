@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mfspeedoptimizations>
+            <general>
+                <enabled>0</enabled>
+                <mfmodule>SpeedOptimization</mfmodule>
+                <mftype>1</mftype>
+            </general>
+            <css>
+                <move_print_css_to_bottom>0</move_print_css_to_bottom>
+            </css>
+            <database>
+                <clean_database_enabled>0</clean_database_enabled>
+            </database>
+        </mfspeedoptimizations>
+        <mflazyzoad>
+            <general>
+                <mfmodule>SpeedOptimization</mfmodule>
+            </general>
+        </mflazyzoad>
+        <mfrocketjavascript>
+            <general>
+                <mfmodule>SpeedOptimization</mfmodule>
+            </general>
+        </mfrocketjavascript>
+    </default>
+</config>

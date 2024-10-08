@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+	<group id="default">
+		<job instance="Magefan\SpeedOptimization\Cron\CleanDatabase" method="execute" name="magefan_pso_cleandatabase">
+			<schedule>20 3 * * *</schedule>
+		</job>
+		<job instance="Magefan\SpeedOptimization\Cron\CleanDatabase" method="cleanClTables" name="magefan_pso_clean_cl_tables">
+			<!-- this cron will be executed on 10 minutes faster that cron run reindex -->
+			<schedule>50 5 1 * *</schedule>
+		</job>
+	</group>
+</config>
