@@ -16,6 +16,14 @@ Get into the Google Page Speed Insights green zone with little to no effort. Imp
   * Magento Community 2.3.0-2.4.x (CE, EE, ECE, B2B)
   * [Magefan Community Extension](https://github.com/magefan/module-community) >= v2.1.30. Please install this extension first if you use installation via FTP.
   * **Note** that the extension is free only for the Magento Community (Open Source) Edition. For Magento EE, ECE, and B2B you need to purchase the license for [Base, Plus, or Extra](https://magefan.com/magento-2-google-page-speed-optimizer/pricing).
+
+## Editions & Pricing
+  
+<a href="https://magefan.com/magento-2-google-page-speed-optimizer/pricing">
+          <img
+            src="https://cm.magefan.com/mf_webp/png/media/wysiwyg/products/google-page-speed.webp"
+            alt="Plans and Pricing for Magento 2 Google Page Speed Optimizer" />
+</a>
     
 ## Benefits
 
