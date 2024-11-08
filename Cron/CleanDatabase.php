@@ -56,6 +56,10 @@ class CleanDatabase
      */
     public function execute()
     {
+        if (!$this->config->getIsEnabled()) {
+            return;
+        }
+
         if (!$this->config->isCleanDatabaseEnabled()) {
             return;
         }

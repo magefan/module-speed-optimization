@@ -26,7 +26,6 @@
                 <field id="infoExtra" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <frontend_model>Magefan\SpeedOptimization\Block\Adminhtml\System\Config\Form\InfoSpeedOptimizationExtra</frontend_model>
                 </field>
-                <!--
                 <field id="enabled" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Enable Extension</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
@@ -35,7 +34,6 @@
                     <label>Product Key</label>
                     <frontend_model>Magefan\Community\Block\Adminhtml\System\Config\Form\ProductKeyField</frontend_model>
                 </field>
-                -->
             </group>
             <group id="image" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Image Optimization</label>
