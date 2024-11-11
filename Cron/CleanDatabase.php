@@ -182,6 +182,10 @@ class CleanDatabase
      */
     public function cleanClTables()
     {
+        if (!$this->config->getIsEnabled()) {
+            return;
+        }
+
         if (!$this->config->isCleanDatabaseEnabled()) {
             return;
         }
