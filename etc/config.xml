@@ -21,6 +21,19 @@
             <database>
                 <clean_database_enabled>0</clean_database_enabled>
             </database>
+            <session>
+                <disable_session_robots>1</disable_session_robots>
+                <robots_user_agents>bot
+crawl
+slurp
+spider
+mediapartners
+ia_archiver
+facebookexternalhit
+pingdom
+monitor
+composer</robots_user_agents>
+            </session>
         </mfspeedoptimizations>
         <mflazyzoad>
             <general>
