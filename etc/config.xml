@@ -21,6 +21,24 @@
             <database>
                 <clean_database_enabled>0</clean_database_enabled>
             </database>
+
+            <session>
+                <disable_session_for_robots>1</disable_session_for_robots>
+                <robots_user_agents>bot
+crawl
+slurp
+spider
+mediapartners
+ia_archiver
+facebookexternalhit
+pingdom
+monitor
+composer</robots_user_agents>
+            </session>
+            <gallery>
+                <enabled>0</enabled>
+                <thumbs_direction>horizontal</thumbs_direction>
+            </gallery>
         </mfspeedoptimizations>
         <mflazyzoad>
             <general>

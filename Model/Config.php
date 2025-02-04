@@ -15,6 +15,7 @@ use Magento\Store\Model\ScopeInterface;
 
 class Config
 {
+    const XML_MODULE_ENABLED = 'mfspeedoptimizations/general/enabled';
 
     /**
      * Enabled clean database
@@ -61,6 +62,18 @@ class Config
     {
         return (bool)$this->getConfig(
             self::XML_CLEAN_DATABASE_ENABLED,
+            $storeId
+        );
+    }
+
+    /**
+     * @param $storeId
+     * @return bool
+     */
+    public function isEnabled($storeId = null): bool
+    {
+        return (bool)$this->getConfig(
+            self::XML_MODULE_ENABLED,
             $storeId
         );
     }

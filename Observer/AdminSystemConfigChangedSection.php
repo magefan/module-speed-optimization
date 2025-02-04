@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace Magefan\SpeedOptimization\Observer;
 
+use Magefan\SpeedOptimization\Model\Config;
 use Magento\Config\Model\Config\Structure\Element\Field;
 use Magento\Config\Model\Config\Structure\Element\Group;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -120,7 +121,11 @@ class AdminSystemConfigChangedSection implements ObserverInterface
     private $scopeCode = null;
 
     /**
-     * AdminSystemConfigChangedSection constructor.
+     * @var Config
+     */
+    private $config;
+
+    /**
      * @param ScopeConfigInterface $scopeConfig
      * @param ConfigLoader $configLoader
      * @param TransactionFactory $transactionFactory
@@ -129,6 +134,7 @@ class AdminSystemConfigChangedSection implements ObserverInterface
      * @param StoreManagerInterface $storeManager
      * @param MagentoConfig $magentoConfig
      * @param ReinitableConfigInterface $appConfig
+     * @param Config $config
      * @param SettingChecker|null $settingChecker
      */
     public function __construct(
@@ -140,6 +146,7 @@ class AdminSystemConfigChangedSection implements ObserverInterface
         StoreManagerInterface $storeManager,
         MagentoConfig $magentoConfig,
         ReinitableConfigInterface $appConfig,
+        Config $config,
         SettingChecker $settingChecker = null
     ) {
         $this->scopeConfig = $scopeConfig;
@@ -150,6 +157,7 @@ class AdminSystemConfigChangedSection implements ObserverInterface
         $this->storeManager = $storeManager;
         $this->magentoConfig = $magentoConfig;
         $this->appConfig = $appConfig;
+        $this->config = $config;
         $this->settingChecker = $settingChecker ?: ObjectManager::getInstance()->get(SettingChecker::class);
     }
 
@@ -160,6 +168,10 @@ class AdminSystemConfigChangedSection implements ObserverInterface
      */
     public function execute(Observer $observer)
     {
+        if (!$this->config->isEnabled()){
+            return;
+        }
+
         $this->store = $observer->getData('store') ?? null;
         $this->website = $observer->getData('website') ?? null;
 
