@@ -113,6 +113,7 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
+
             <group id="session" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Session Optimization</label>
                 <field id="disable_session_robots" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
@@ -125,6 +126,19 @@
                         <field id="disable_session_robots">1</field>
                     </depends>
                     <comment>Enter User-Agents for which session should be disabled.</comment>
+                </field>
+            </group>
+
+            <group id="gallery" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Gallery Optimization (Fotorama)</label>
+                <field id="enabled" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Use Optimized Gallery</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="thumbs_direction" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Gallery Thumbs Direction</label>
+                    <source_model>Magefan\SpeedOptimization\Model\Config\Source\GalleryThumbsDirection</source_model>
                 </field>
             </group>
         </section>
