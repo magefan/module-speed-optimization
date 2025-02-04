@@ -43,7 +43,7 @@ abstract class InfoPlan extends \Magefan\Community\Block\Adminhtml\System\Config
 
         if ($text = $this->getText()) {
             $textHtml = '<div style="padding:10px;background-color:#f8f8f8;border:1px solid #ddd;margin-bottom:7px;">';
-            $textHtml .= $text . ' <a style="color: #ef672f; text-decoration: underline;" href="https://magefan.com/magento2-blog-extension/pricing?utm_source=blog_config&utm_medium=link&utm_campaign=regular" target="_blank">Read more</a>.';
+            $textHtml .= $text . ' <a style="color: #ef672f; text-decoration: underline;" href="https://magefan.com/magento-2-google-page-speed-optimizer/pricing?utm_source=ps_config&utm_medium=link&utm_campaign=regular" target="_blank">Read more</a>.';
             $textHtml .= '</div>';
         }
 
@@ -55,7 +55,7 @@ abstract class InfoPlan extends \Magefan\Community\Block\Adminhtml\System\Config
                 require(["jquery", "Magento_Ui/js/modal/alert", "domReady!"], function($, alert){
                     setInterval(function(){
                         var sections = ' . $this->getSectionsJson() . ';
-                        
+
                         sections.forEach(function(sectionId) {
                             var $section = $("#" + sectionId + "-state").parent(".section-config");
                             if (!$section.length) {
@@ -67,7 +67,7 @@ abstract class InfoPlan extends \Magefan\Community\Block\Adminhtml\System\Config
                                     $fieldset.prepend(\'' . $textHtml . '\');
                                 }
                             }
-                            
+
                             $section.find(".use-default").css("visibility", "hidden");
                             $section.find("input,select").each(function(){
                             console.log($(this))
@@ -76,7 +76,7 @@ abstract class InfoPlan extends \Magefan\Community\Block\Adminhtml\System\Config
                                 if ($(this).data("mffdisabled")) return;
                                 $(this).data("mffdisabled", 1);
                                 $(this).click(function(){
-                                    $(this).val($(this).data("mfOldValue")).trigger("change");     
+                                    $(this).val($(this).data("mfOldValue")).trigger("change");
                                     alert({
                                         title: "You cannot use this option.",
                                         content: "' . $optionAvailableInText . '",
@@ -84,7 +84,7 @@ abstract class InfoPlan extends \Magefan\Community\Block\Adminhtml\System\Config
                                             text: "Upgrade Plan Now",
                                             class: "action primary accept",
                                             click: function () {
-                                                window.open("https://magefan.com/magento2-blog-extension/pricing?utm_source=blog_config&utm_medium=link&utm_campaign=regular");
+                                                window.open("https://magefan.com/magento-2-google-page-speed-optimizer/pricing?utm_source=ps_config&utm_medium=link&utm_campaign=regular");
                                             }
                                         }]
                                     });
