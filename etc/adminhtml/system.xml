@@ -132,12 +132,12 @@
             <group id="gallery" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Gallery Optimization (Fotorama)</label>
                 <field id="enabled" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
-                    <label>Use Optimized Gallery</label>
+                    <label>Use Optimized Gallery (Plus)</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
                 <field id="thumbs_direction" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Gallery Thumbs Direction</label>
+                    <label>Gallery Thumbs Direction (Plus)</label>
                     <source_model>Magefan\SpeedOptimization\Model\Config\Source\GalleryThumbsDirection</source_model>
                 </field>
             </group>
