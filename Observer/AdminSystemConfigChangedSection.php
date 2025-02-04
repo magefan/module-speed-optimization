@@ -168,7 +168,7 @@ class AdminSystemConfigChangedSection implements ObserverInterface
      */
     public function execute(Observer $observer)
     {
-        if (!$this->config->getIsEnabled()){
+        if (!$this->config->isEnabled()){
             return;
         }
 

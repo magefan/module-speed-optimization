@@ -116,16 +116,16 @@
 
             <group id="session" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Session Optimization</label>
-                <field id="disable_session_robots" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="disable_session_for_robots" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Disable Session For Robots (Plus)</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
                 <field id="robots_user_agents" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Robots User-Agents (Plus)</label>
                     <depends>
-                        <field id="disable_session_robots">1</field>
+                        <field id="disable_session_for_robots">1</field>
                     </depends>
-                    <comment>Enter User-Agents for which session should be disabled.</comment>
+                    <comment>Enter User-Agents for which session should be disabled. (one per line)</comment>
                 </field>
             </group>
 

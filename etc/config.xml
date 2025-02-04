@@ -23,7 +23,7 @@
             </database>
 
             <session>
-                <disable_session_robots>1</disable_session_robots>
+                <disable_session_for_robots>1</disable_session_for_robots>
                 <robots_user_agents>bot
 crawl
 slurp

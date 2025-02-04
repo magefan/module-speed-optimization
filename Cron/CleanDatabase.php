@@ -56,7 +56,7 @@ class CleanDatabase
      */
     public function execute()
     {
-        if (!$this->config->getIsEnabled()) {
+        if (!$this->config->isEnabled()) {
             return;
         }
 
@@ -182,7 +182,7 @@ class CleanDatabase
      */
     public function cleanClTables()
     {
-        if (!$this->config->getIsEnabled()) {
+        if (!$this->config->isEnabled()) {
             return;
         }
 
