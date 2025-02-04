@@ -27,6 +27,7 @@ class InfoSpeedOptimizationPlus extends InfoPlan
         $sections = json_encode([
             'mfspeedoptimizations_session',
             'mfspeedoptimizations_css_move_print_css_to_bottom',
+            'mfspeedoptimizations_gallery'
         ]);
         return $sections;
     }
