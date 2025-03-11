@@ -10,7 +10,6 @@ declare(strict_types=1);
 
 namespace Magefan\SpeedOptimization\Observer;
 
-use Magefan\Community\Model\SystemConfigAutoKeyManager;
 use Magefan\SpeedOptimization\Model\Config;
 use Magento\Config\Model\Config\Structure\Element\Field;
 use Magento\Config\Model\Config\Structure\Element\Group;
@@ -126,8 +125,6 @@ class AdminSystemConfigChangedSection implements ObserverInterface
      */
     private $config;
 
-    private $autoKeyManager;
-
     /**
      * @param ScopeConfigInterface $scopeConfig
      * @param ConfigLoader $configLoader
@@ -138,7 +135,6 @@ class AdminSystemConfigChangedSection implements ObserverInterface
      * @param MagentoConfig $magentoConfig
      * @param ReinitableConfigInterface $appConfig
      * @param Config $config
-     * @param Magefan\Community\Model\SystemConfigAutoKeyManager $autoKeyManager
      * @param SettingChecker|null $settingChecker
      */
     public function __construct(
@@ -151,7 +147,6 @@ class AdminSystemConfigChangedSection implements ObserverInterface
         MagentoConfig $magentoConfig,
         ReinitableConfigInterface $appConfig,
         Config $config,
-        SystemConfigAutoKeyManager $autoKeyManager,
         SettingChecker $settingChecker = null
     ) {
         $this->scopeConfig = $scopeConfig;
@@ -163,7 +158,6 @@ class AdminSystemConfigChangedSection implements ObserverInterface
         $this->magentoConfig = $magentoConfig;
         $this->appConfig = $appConfig;
         $this->config = $config;
-        $this->autoKeyManager = $autoKeyManager;
         $this->settingChecker = $settingChecker ?: ObjectManager::getInstance()->get(SettingChecker::class);
     }
 
@@ -184,10 +178,6 @@ class AdminSystemConfigChangedSection implements ObserverInterface
         $this->initScope();
 
         $groups = $this->scopeConfig->getValue('mfspeedoptimizations', $this->scope, $this->scopeCode);
-
-        if (isset($groups['general']['key'])) {
-            $this->autoKeyManager->execute('mfspeedoptimizations', $groups['general']['key']);
-        }
 
         if (!isset($groups['css'])) {
             return;
