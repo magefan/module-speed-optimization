@@ -9,11 +9,11 @@
             "email": "support@magefan.com"
         }
     ],
-    "version": "2.0.1",
+    "version": "2.0.2",
     "require": {
-        "magefan/module-community" : ">=2.2.4",
+        "magefan/module-community" : ">=2.2.7",
         "magefan/module-lazyload" : ">=2.1.6",
-        "magefan/module-rocketjavascript" : ">=2.2.0"
+        "magefan/module-rocketjavascript" : ">=2.2.1"
     },
     "autoload": {
         "files": [
