@@ -29,7 +29,7 @@ class CacheWarmer extends Info
         $planText = (!$this->getModuleVersion->execute($this->getModuleName() . $this->getMinPlan()))
             ? __('To enable <strong>Page Cache Warmer</strong> please update to %1 or install %2.',
                 '<a href="#"><strong>Page Speed Optimization Extra</strong></a>',
-                '<a rel="noopener" target="_blank" href="https://magefan.com/magento-2-page-cache-warmer"><strong>Magento 2 Page Cache Warmer</strong></a>')
+                '<a rel="noopener" target="_blank" href="https://magefan.com/magento-2-full-page-cache-warmer"><strong>Magento 2 Page Cache Warmer</strong></a>')
             : __('To enable <strong>Page Cache Warmer</strong> please navigate to')
                 . '<a href="' . $this->escapeHtml($this->getUrl('*/*/*', ['section' => 'mfpagecachewarmer'])) . '" target="_blank"> <strong>Stores > Configuration > Magefan Extensions > Cache Warmer</strong></a>.';
 
