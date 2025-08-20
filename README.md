@@ -26,7 +26,7 @@ Get into the Google Page Speed Insights green zone with little to no effort. Imp
   
 <a href="https://magefan.com/magento-2-google-page-speed-optimizer/pricing">
           <img
-            src="https://cm.magefan.com/mf_webp/png/media/wysiwyg/products/google-page-speed.webp"
+            src="https://cm.magefan.com/wysiwyg/products/google-page-speed-pricing-plans.png"
             alt="Plans and Pricing for Magento 2 Google Page Speed Optimizer" />
 </a>
     
