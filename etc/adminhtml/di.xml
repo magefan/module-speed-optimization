@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magefan\Community\Model\Menu\MagefanGroupsProvider">
+        <arguments>
+            <argument name="groups" xsi:type="array">
+                <item name="mfspeedoptimizations" xsi:type="array">
+                    <item name="name" xsi:type="string">Page Speed Optimization</item>
+                    <item name="base" xsi:type="string">Magefan_SpeedOptimization</item>
+                    <item name="extensions" xsi:type="array">
+                        <item name="Magefan_SpeedOptimization" xsi:type="string">Magefan_SpeedOptimization</item>
+                        <item name="Magefan_LazyLoad" xsi:type="string">Magefan_LazyLoad</item>
+                        <item name="Magefan_RocketJavaScript" xsi:type="string">Magefan_RocketJavaScript</item>
+                        <item name="Magefan_WebP" xsi:type="string">Magefan_WebP</item>
+                        <item name="Magefan_PageCacheWarmer" xsi:type="string">Magefan_PageCacheWarmer</item>
+                    </item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
