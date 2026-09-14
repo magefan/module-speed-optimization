@@ -29,7 +29,7 @@ class WebP extends Info
         $planText = !$this->getModuleVersion->execute($this->getModuleName() . $this->getMinPlan())
             ? __('To enable <strong>WebP Images</strong> please update to %1 or install %2.',
                 '<a href="#"><strong>Page Speed Optimization Plus/Extra</strong></a>',
-                '<a rel="noopener" target="_blank" href="https://magefan.com/magento-2-webp-optimized-images"><strong>Magento 2 WebP Extension</strong></a>')
+                '<a target="_blank" href="https://magefan.com/magento-2-webp-optimized-images"><strong>Magento 2 WebP Extension</strong></a>')
             : __('To enable <strong>WebP Images</strong> please navigate to %1.',
                 '<a href="' . $this->escapeHtml($this->getUrl('*/*/*', ['section' => 'mfwebp'])) . '" target="_blank"> <strong>Stores > Configuration > Magefan Extensions > WebP Optimized Images</strong></a>');
 
